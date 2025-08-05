@@ -1,0 +1,297 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.maincards {
+  display: flex;
+}
+.card1 {
+  width: 452px;
+  min-height: 100vh;
+  background-color: rgb(39, 37, 37);
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 30px;
+}
+.inputsearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#SearchCity {
+  border-radius: 30px;
+  padding: 15px;
+  width: 300px;
+  margin: 20px 0px;
+}
+.defaultImg {
+  display: flex;
+  justify-content: center;
+}
+
+#degreeCelcius {
+  font-size: 80px;
+  font-weight: 700;
+  font-style: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loc_day {
+  margin: 30px 0px 10px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+.lineDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line {
+  margin: 5px 0px;
+  border: 1px solid rgb(218, 216, 216);
+  width: 300px;
+}
+.threeLines {
+  width: 300px;
+  margin: 30px 0px 30px 50px;
+  display: flex;
+  flex-direction: column;
+
+  /* align-items:center; */
+  gap: 15px;
+}
+.mainWindBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px;
+  gap: 10px;
+}
+.windSpeedBox {
+  width: 350px;
+  background-color: rgb(29, 28, 28);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+}
+.humidity {
+  display: flex;
+  width: 150px;
+  height: 50px;
+  gap: 10px;
+}
+.imgHumi {
+  width: 50px;
+  height: 50px;
+}
+.windSpeed {
+  display: flex;
+  width: 150px;
+  height: 50px;
+  gap: 10px;
+}
+.textWindSpeed {
+  display: flex;
+  flex-direction: column;
+}
+.card2 {
+  width: 900px;
+  min-height: 100vh;
+  background-color: rgb(39, 37, 37);
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 30px;
+}
+.card2_1 {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 0px 10px 30px;
+  gap: 50px;
+}
+#today {
+  color: rgb(151, 142, 142);
+  
+}
+#week{
+     text-decoration-line: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: white; 
+}
+.line2{
+    margin-left: 120px;
+}
+#line1{
+    /* margin: 5px 0px; */
+  /* border: 1px solid rgb(218, 216, 216); */
+  /* width: 50px; */
+}
+.mainDaysCard {
+  display: flex;
+  justify-content: space-evenly;
+}
+.dayscard {
+  background-color: rgb(29, 28, 28);
+  width: 100px;
+  height: 150px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px;
+}
+.card2_2 {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 0px 10px 30px;
+  gap: 30px;
+}
+.maintodaysCard {
+  display: flex;
+}
+.todaysCard1 {
+  background-color: rgb(29, 28, 28);
+  width: 260px;
+  height: 220px;
+  border-radius: 10px;
+  padding: 20px 0px 10px 20px;
+  margin: 30px 0px 10px 30px;
+}
+.todaysCard1_p1 {
+  font-size: 48px;
+  padding: 20px 0px 20px 0px;
+  font-weight: 600;
+}
+.todaysCard1text {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  /* gap: 100px; */
+}
+#good {
+  color: green;
+}
+#moderate {
+  color: yellow;
+}
+.maingraph {
+  display: flex;
+}
+.graph {
+  background-color: rgb(29, 28, 28);
+  width: 560px;
+  height: 220px;
+  border-radius: 20px;
+  padding: 20px 0px 20px 0px;
+  margin: 30px 0px 10px 30px;
+}
+.graph p {
+  padding: 10px 0px 0px 20px;
+}
+.mainsunrise {
+  width: 250px;
+  height: 220px;
+  background-color: rgb(29, 28, 28);
+  border-radius: 20px;
+  padding: 20px 0px 20px 20px;
+  margin: 30px 0px 10px 30px;
+}
+.mainsunrise1{
+    margin-top: 20px;
+}
+.sunrise {
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+}
+.sunset {
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+}
+.sunriseText{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#sunrise{
+    font-size: 13px;
+    color: rgb(122, 113, 113);
+
+}
+.sunsetText{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#sunset{
+    font-size: 13px;
+    color: rgb(122, 113, 113);
+}
+ 
+/* card 1 responsive for  */ 
+
+@media  ( max-width: 800px ) {     
+
+    .card1 {
+
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+    }
+.defaultImg {
+  display: flex;
+  justify-content: center;
+}
+#mainImg{
+    width: 200px;
+    height: 200px;
+}
+  .maincards {
+  display: flex;
+  flex-wrap: wrap;
+}
+#degreeCelcius {
+  font-size: 50px;
+}
+.loc_day {
+  margin: 30px 0px 10px 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.line {
+  margin: 5px 0px;
+  border: 1px solid rgb(218, 216, 216);
+  width: 250px;
+}
+.threeLines {
+  width: 300px;
+  margin: 30px 0px 30px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+
+}
+@media  ( max-width: 800px ) {  
+
+  .mainDaysCard {
+    display: flex;
+ flex-wrap: wrap;
+}
+
+}

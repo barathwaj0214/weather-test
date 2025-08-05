@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="maincards">
+        <div class="card1">
+          <div class="inputsearch">
+            <input type="text" placeholder="Search city..." id="SearchCity" />
+          </div>
+          <div class="defaultImg">
+            <img id="mainImg" src="Assets/Main img weather.svg" alt="" />
+          </div>
+          <p id="degreeCelcius">30°C</p>
+          <div class="loc_day">
+            <p id="location">Pernambut</p>
+            <p id="day">Monday</p>
+          </div>
+          <div class="lineDiv">
+            <div class="line"></div>
+          </div>
+          <div class="threeLines">
+            <p id="aboutWeather"><i class="ri-cloud-line"></i> Light Rain</p>
+            <p id="minTemp">
+              <i class="ri-temp-cold-line"></i> Min Temperature - 28°C
+            </p>
+            <p id="maxTemp">
+              <i class="ri-temp-cold-line"></i> Max Temperature - 31°C
+            </p>
+          </div>
+          <div class="mainWindBox">
+            <div class="windSpeedBox">
+              <div class="humidity">
+                <img class="imgHumi" src="Assets/humidity img.svg" alt="" />
+                <div class="insideHumi">
+                  <p id="percentage">83%</p>
+                  <p>Humidity</p>
+                </div>
+              </div>
+              <div class="windSpeed">
+                <img src="Assets/wind spped img.svg" alt="" />
+                <div class="textWindSpeed">
+                  <p id="kmph">6km/h</p>
+                  <p>WindSpeed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="card2_1">
+            <p id="today">Today</p>
+            <p id="week">week</p>
+           
+          </div>
+          <div class="line2">
+           <div id="line1"></div>
+           </div>
+
+          <div class="mainDaysCard">
+            <div class="dayscard">
+              <p>Sun</p>
+              <img src="Assets/sunday img.svg" alt="" />
+              <p id="sundayDegree">32°</p>
+            </div>
+            <div class="dayscard">
+              <p>Mon</p>
+              <img src="Assets/Monday img.svg" alt="" />
+              <p id="sundayDegree">31°</p>
+            </div>
+            <div class="dayscard">
+              <p>Tue</p>
+              <img src="Assets/tuesday img.svg" alt="" />
+              <p id="sundayDegree">27°</p>
+            </div>
+            <div class="dayscard">
+              <p>Wed</p>
+              <img src="Assets/wed img.svg" alt="" />
+              <p id="sundayDegree">31°</p>
+            </div>
+            <div class="dayscard">
+              <p>Thu</p>
+              <img src="Assets/thursday img.svg" alt="" />
+              <p id="sundayDegree">25°</p>
+            </div>
+            <div class="dayscard">
+              <p>Fri</p>
+              <img src="Assets/friday img.svg" alt="" />
+              <p id="sundayDegree">26°</p>
+            </div>
+            <div class="dayscard">
+              <p>Sat</p>
+              <img src="Assets/sat img.svg" alt="" />
+              <p id="sundayDegree">30°</p>
+            </div>
+          </div>
+          <div class="card2_2">
+            <p>Today’s Overview</p>
+          </div>
+          <div class="maintodaysCard">
+            <div class="todaysCard1">
+              <p>Air Quality Index</p>
+              <div class="todaysCard1_p1">
+                <p>53</p>
+              </div>
+              <div class="todaysCard1text">
+                <p id="good">Good</p>
+                <img src="Assets/todaysimg1.svg" alt="" />
+              </div>
+            </div>
+            <div class="todaysCard1">
+              <p>UV Index</p>
+              <div class="todaysCard1_p1">
+                <p>3</p>
+              </div>
+              <div class="todaysCard1text">
+                <p id="moderate">Moderate</p>
+                <img src="Assets/todaysimg2.svg" alt="" />
+              </div>
+            </div>
+            <div class="todaysCard1">
+              <p>Pressure (hpa)</p>
+              <div class="todaysCard1_p1">
+                <p>1006</p>
+              </div>
+              <div class="todaysCard1text">
+                <p id="normal">Normal</p>
+                <img src="Assets/todaysimg3.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="maingraph">
+            <div class="graph">
+              <p>Precipitation</p>
+            </div>
+            <div class="mainsunrise">
+              <p>Sunrise & Sunset</p>
+              <div class="mainsunrise1">
+                <div class="sunrise">
+                  <img src="Assets/Sunrise.svg" alt="" />
+                  <div class="sunriseText">
+                    <p id="sunrise">Sunrise</p>
+                    <p>7:06 AM</p>
+                  </div>
+                </div>
+                <div class="sunset">
+                  <img src="Assets/Sunset.svg" alt="" />
+                  <div class="sunsetText">
+                    <p id="sunset">Sunset</p>
+                    <p>7:03 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
