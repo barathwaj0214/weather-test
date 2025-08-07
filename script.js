@@ -20,7 +20,7 @@ searchCity.addEventListener("change", (e) => {
 });
 
 async function fetchWeather(city) {
-  let url = `http://api.weatherapi.com/v1/forecast.json?key=f07153dd50a34faba2453414250608&q=${city}&aqi=yes`;
+  let url = `http://api.weatherapi.com/v1/forecast.json?key=f07153dd50a34faba2453414250608&q=${city}&days=7&aqi=yes`;
   try {
     let res = await fetch(url);
     let data = await res.json();
@@ -34,8 +34,8 @@ async function fetchWeather(city) {
 
 function callWeather(data) {
   degreeCelcius.textContent = `${data.current.temp_c}°C`;
-  weatherImg.src = data.current.condition.icon;
-  // imageGenerator(data.current.condition.text);
+  // weatherImg.src = data.current.condition.icon;
+  imageGenerator(data.current.condition.text);
   locationCity.textContent = data.location.name;
   aboutWeather.innerHTML = `<i class="ri-cloud-line"></i> ${data.current.condition.text}`;
   percentageHumi.textContent = `${data.current.humidity}%`;
@@ -49,27 +49,45 @@ function callWeather(data) {
   maxTemp.innerHTML = `<i class="ri-temp-cold-line"></i>   Max Temperature -${data.forecast.forecastday[0].day.mintemp_c}°C`;
   airQuality.textContent = data.current.air_quality.co;
   uvIndex.textContent = data.forecast.forecastday[0].day.uv;
-  // pressure.textContent = data.current.pressure_mb;
+  pressure.textContent = data.current.pressure_in;
   sunrise.textContent = data.forecast.forecastday[0].astro.sunrise;
   sunset.textContent = data.forecast.forecastday[0].astro.sunset;
 }
+// callWeather("Pernambut")
 
-// function imageGenerator(weather) {
-//   switch (weather) {
-//     case "Cloudy":
-//       weatherImg.src = "Assets/cloudyimg.svg";
-//       break;
-//     case "Partly Cloudy":
-//       weatherImg.src = "Assets/partlycloudyimg.svg";
-//       break;
-//     case "Sunny":
-//       weatherImg.src = "Assets/cleardayimg.svg";
-//       break;
-//     case "Mist":
-//       weatherImg.src = "Assets/lightrainimg.svg";
-//       break;
-//     case "Overcast":
-//       weatherImg.src = "Assets/heavyrain.svg";
-//       break;
-//   }
-// }
+const forecastDays = response.forecast.forecastday;
+
+forecastDays.forEach(day => {
+  const date = day.date;
+  const minTemp = day.day.mintemp_c;
+  const maxTemp = day.day.maxtemp_c;
+  const condition = day.day.condition.text;
+  const icon = "https:" + day.day.condition.icon;
+
+  // Use this data to render UI for each day
+});
+
+
+function imageGenerator(weather) {
+  switch (weather) {
+    case "Cloudy":
+      weatherImg.src = "Assets/cloudyimg.svg";
+      break;
+    case "Partly Cloudy":
+      weatherImg.src = "Assets/partlycloudyimg.svg";
+      break;
+    case "Sunny":
+      weatherImg.src = "Assets/cleardayimg.svg";
+      break;
+    case "Mist":
+      weatherImg.src = "Assets/lightrainimg.svg";
+      break;
+    case "Overcast":
+      weatherImg.src = "Assets/heavyrain.svg";
+      break;
+    default:
+      weatherImg.src = "Assets/cloudyimg.svg";
+  }
+}
+
+
