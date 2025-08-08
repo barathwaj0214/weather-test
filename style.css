@@ -34,6 +34,7 @@ body {
   margin: 20px 0px;
   background-color: #c2d4d3;
   outline: none;
+  font-size: 18px;
 }
 .defaultImg {
   display: flex;
@@ -41,7 +42,7 @@ body {
 }
 
 #degreeCelcius {
-  font-size: 80px;
+  font-size: 70px;
   font-weight: 700;
   font-style: bold;
   display: flex;
@@ -61,7 +62,7 @@ body {
 .line {
   margin: 5px 0px;
   border: 1px solid rgb(218, 216, 216);
-  width: 300px;
+  width: 250px;
 }
 .threeLines {
   width: 300px;
@@ -78,7 +79,7 @@ body {
   gap: 10px;
 }
 .windSpeedBox {
-  width: 350px;
+  width: 300px;
   background-color: rgb(29, 28, 28);
   padding: 10px;
   border-radius: 10px;
@@ -104,6 +105,17 @@ body {
   display: flex;
   flex-direction: column;
 }
+.card {
+  background-color: rgb(29, 28, 28);
+  width: 100px;
+  height: 150px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px;
+}
 .card2 {
   width: 900px;
   min-height: 100vh;
@@ -127,12 +139,13 @@ body {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: white;
-  font-size: 15px;
+  /* font-size: 15px; */
+  padding-bottom: 20px;
 }
 .line2 {
   margin-left: 120px;
 }
-.mainDaysCard {
+#mainDaysCard {
   display: flex;
   justify-content: space-evenly;
 }
@@ -174,10 +187,10 @@ body {
   justify-content: space-between;
   padding-right: 20px;
 }
-#good {
+#airQualityText {
   color: green;
 }
-#moderate {
+#uvIndexText {
   color: yellow;
 }
 .maingraph {
@@ -193,6 +206,9 @@ body {
 }
 .graph p {
   padding: 10px 0px 0px 20px;
+}
+#graphimg {
+  margin-left: 20px;
 }
 .mainsunrise {
   width: 250px;
@@ -239,7 +255,107 @@ body {
   width: 200px;
   height: 200px;
 }
+
+
 @media (max-width: 800px) {
+  .maincards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card1{
+    margin: 10px 20px;
+    min-height: 10vh;
+  }
+  .card2 {
+    width: 90%;
+    margin: 20px 0;
+    min-height: auto;
+  }
+
+  #mainImg {
+    width: 150px;
+    height: 150px;
+  }
+
+  #degreeCelcius {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .loc_day {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .threeLines {
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+
+  .mainWindBox {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .windSpeedBox {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .humidity,
+  .windSpeed {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .card2_1,
+  .card2_2 {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+
+  #mainDaysCard {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .dayscard {
+    margin: 10px;
+  }
+
+  .maintodaysCard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .todaysCard1 {
+    width: 90%;
+    margin: 15px 0;
+  }
+
+  .maingraph {
+    flex-direction: column;
+    align-items: center;
+  }
+#graphimg{
+  width: 300px;
+  height: 200px;
+}
+  .graph,
+  .mainsunrise {
+    width: 90%;
+    margin: 15px 0;
+  }
+}
+
+
+/* @media (max-width: 800px) {
   .card1 {
     display: flex;
     flex-direction: column;
@@ -283,4 +399,4 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
-}
+} */
