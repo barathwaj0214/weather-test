@@ -63,7 +63,7 @@ function callWeather(data) {
 
   const pressureData = data.current.pressure_in;
   pressure.textContent = pressureData;
-  updateAirPressure(pressureData)
+  updateAirPressure(pressureData);
 
   sunrise.textContent = data.forecast.forecastday[0].astro.sunrise;
   sunset.textContent = data.forecast.forecastday[0].astro.sunset;
@@ -250,3 +250,4 @@ function updateAirPressure(pressureData) {
   pressureText.textContent = status;
   pressureText.style.color = color;
 }
+  
