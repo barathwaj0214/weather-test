@@ -19,7 +19,7 @@ let airQualityText = document.getElementById("airQualityText");
 let pressureText = document.getElementById("pressureText");
 
 async function fetchWeather(city) {
-  let url = `http://api.weatherapi.com/v1/forecast.json?key=f07153dd50a34faba2453414250608&q=${city}&days=7&aqi=yes`;
+  let url = `https://api.weatherapi.com/v1/forecast.json?key=f07153dd50a34faba2453414250608&q=${city}&days=7&aqi=yes`;
   try {
     let res = await fetch(url);
     let data = await res.json();
@@ -250,4 +250,3 @@ function updateAirPressure(pressureData) {
   pressureText.textContent = status;
   pressureText.style.color = color;
 }
-  
