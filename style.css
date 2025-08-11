@@ -11,6 +11,8 @@ body {
 }
 .maincards {
   display: flex;
+  justify-content: center;
+  /* align-items: center; */
 }
 .card1 {
   width: 452px;
